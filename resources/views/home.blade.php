@@ -9,14 +9,16 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
                     {{ __('You are logged in!') }}
                 </div>
+
             </div>
+            <button class="btn btn-primary"><a href="/projects">Add New Project</a></button>
         </div>
     </div>
 </div>
