@@ -15,11 +15,14 @@
         </div>
 
         <div class="d-flex align-items-center mr-auto">
-            <form action="projects/{project}" method="POST">
+            <form action="/projects/{{$project->id}}" method="POST">
                 @method('DELETE')
                 @csrf
                 <input type="submit" class=" btn btn-delete" value="">
+
             </form>
+
         </div>
+
     </div>
 </div>

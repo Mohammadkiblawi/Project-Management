@@ -114,7 +114,7 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect('/projects');
+        return redirect('/projects')->with('message', 'تم اتمام عملية الحذف بنجاح');
         //
     }
 }

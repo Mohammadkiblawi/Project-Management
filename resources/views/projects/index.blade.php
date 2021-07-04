@@ -10,7 +10,11 @@
     </div>
 
 </header>
-
+@if(session()->has('message'))
+<div class="alert alert-success d-flex  justify-content-between align-items-center">
+    {{ session()->get('message') }}
+</div>
+@endif
 <section dir="rtl" class="text-right">
     <div class="row">
         @forelse($projects as $project)
@@ -37,6 +41,7 @@
                     </div>
                 </div>
                 @include('projects.footer')
+
             </div>
         </div>
         @empty
